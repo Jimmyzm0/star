@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* 适应不同屏幕宽度 */
+    grid-gap: 10px; /* 网格间距 */
+    padding: 10px;
+}
+
+.grid-item {
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* 轻微阴影效果 */
+}
+
+/* 响应式设计: 在更小的屏幕上调整网格大小 */
+@media screen and (max-width: 600px) {
+    .grid-container {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+}
