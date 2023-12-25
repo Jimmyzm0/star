@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    fetch('https://raw.githubusercontent.com/your-username/your-repository/branch/path/to/your/blessings.csv')
+    fetch('https://raw.githubusercontent.com/Jimmyzm0/star/main/%E7%A5%9D%E7%A6%8F%E8%AA%9E.csv')
         .then(response => response.text())
         .then(data => {
             const blessings = data.split('\n');
