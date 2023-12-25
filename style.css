@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto:wght@400;700&display=swap');
 
 body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
-    background-color: #f4f4f9;
+    background: linear-gradient(135deg, #f4f4f9 0%, #e4e4f9 100%);
     color: #333;
     text-align: center;
     padding: 20px;
@@ -24,12 +24,14 @@ body {
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border: 1px solid #ccc;
+    transition: all 0.3s ease-in-out;
 }
 
 .grid-item:hover {
     transform: scale(1.05);
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    border-color: #007bff;
 }
 
 @media screen and (max-width: 600px) {
