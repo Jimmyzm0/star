@@ -1,9 +1,11 @@
-document.addEventListener('DOMContentLoaded', function () {
-    fetch('https://raw.githubusercontent.com/Jimmyzm0/star/main/tk1.csv')
-        .then(response => response.text())
-        .then(data => {
-            const blessings = data.split('\n');
-            const container = document.querySelector('.grid-container');
+document.addEventListener('DOMContentLoaded', async function () {
+    try {
+        const response = await fetch('https://raw.githubusercontent.com/Jimmyzm0/star/main/tk1.csv');
+        const data = await response.text();
+        const blessings = data.split('\n');
+        const container = document.querySelector('.grid-container');
+
+        if (container) {
             blessings.forEach(blessing => {
                 if (blessing.trim()) {
                     const div = document.createElement('div');
@@ -12,6 +14,11 @@ document.addEventListener('DOMContentLoaded', function () {
                     container.appendChild(div);
                 }
             });
-        })
-        .catch(error => console.error('Error:', error));
+        } else {
+            console.error('Container element not found');
+        }
+    } catch (error) {
+        console.error('Error:', error);
+        // 这里可以添加用户界面的错误处理，例如显示一个错误消息
+    }
 });
